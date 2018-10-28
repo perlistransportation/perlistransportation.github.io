@@ -359,6 +359,7 @@ input:-webkit-autofill:focus {
     width: 100%;
 }
 
+
 .top-area-bg::after {
     background: #3c4147;
     content: "";
@@ -723,6 +724,10 @@ ul#nav li ul a,
 
 .slider-bg-three {
     background: url(img/slider/slide_3.jpg) no-repeat scroll center center / cover;
+}
+
+.slider-bg-four {
+    background: url(img/slider/slide_4.jpg) no-repeat scroll center center / cover;
 }
 
 .welcome-slider-area.owl-carousel .owl-nav > div {
@@ -1123,9 +1128,9 @@ ul#nav li ul a,
     7. PROMO AREA
 ----------------------------- */
 
-.promo-top-area {
+/*.promo-top-area {
     background: rgba(0, 0, 0, 0) url("img/promo/promo_top_bg.png") no-repeat scroll right 5% bottom 50% / 40% auto;
-}
+}*/
 
 .single-promo {
     margin-bottom: 50px;
@@ -1897,9 +1902,9 @@ a.scrolltotop:hover {
     padding-bottom: 50px;
 }
 
-.home-four .service-bottom-area-bg {
+/*.home-four .service-bottom-area-bg {
     background: rgba(0, 0, 0, 0) url("img/service/service-area-bg-2.jpg") repeat scroll 0 0;
-}
+}*/
 
 .top-area.single-page {
     height: 500px;
