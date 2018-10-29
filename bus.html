@@ -233,7 +233,7 @@
                                                     <img src="" width="100%" height="300" style="transform:rotate(270deg);">
                                                 </div> -->
                                                 <div id="image-gallery-1" class="cf">
-                                                    <img src="img/maps/T10.jpg" data-high-res-src="img/maps/T10.jpg" alt="" class="gallery-items" style="transform:rotate(270deg);" height="30" width="550">
+                                                    <img src="img/maps/T10.jpg" id="imageT10"  data-high-res-src="img/maps/T10.jpg" alt="" class="gallery-items" style="transform:rotate(270deg);" height="30" width="550">
                                                 </div>
                                             </div>
                                             <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
@@ -404,28 +404,23 @@
 
     <script type="text/javascript">
 
-        var angle = 0;
+        // var angle = 0;
         $(function () {
             var viewer = ImageViewer();
             $('.gallery-items').click(function () {
                 var imgSrc = this.src,
                     highResolutionImage = $(this).data('high-res-img');
-                    angle += 270;
-         
-                viewer.show(imgSrc, highResolutionImage).rotate(angle);
+                    // angle += 270;
+                $("#imageT10").css({'transform': 'rotate(270deg)'});
+                viewer.show(imgSrc, highResolutionImage);
             });
         });
 
-    //      var angle = 0;
-    // $('#left').on('click', function () {  
-    //     angle -= 90;
-    //     $("#image").rotate(angle);
+    // $(document).ready(function() {
+    // $(document).on('click','#clickme',function(){
+    //     $("#image").css({'transform': 'rotate(90deg)'});
     // });
 
-    // $('#right').on('click', function () {  
-    //     angle += 90;
-    //     $("#image").rotate(angle);
-    // });
         </script>
 </body>
 
