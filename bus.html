@@ -33,17 +33,22 @@
     <link href="css/responsive.css" rel="stylesheet">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+    <script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script>
+
+    <link href="imageviewer/imageviewer.css"  rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .gallery-items{
+        float: left;
+        height: 350px;
+    }
+    </style>
+    <script src="imageviewer/jquery-1.11.3.min.js"></script> 
+    <script src="imageviewer/imageviewer.js"></script>
 </head>
 
 <body class="single-page">
 
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
     <!--- PRELOADER -->
     <div class="preeloader">
@@ -55,7 +60,7 @@
 
     <!--START TOP AREA-->
     <header class="top-area" id="home">
-        <div class="top-area-bg" data-stellar-background-ratio="0.6"></div>
+        <div class="top-area-bg3" data-stellar-background-ratio="0.6"></div>
         <div class="header-top-area">
             <!--MAINMENU AREA-->
             <div class="mainmenu-area" id="mainmenu-area">
@@ -81,7 +86,7 @@
         </div>
         <!--HOME SLIDER AREA-->
         <div class="welcome-area">
-            <div class="area-bg"></div>
+            <div class="area-bg3"></div>
             <div class="container">
                 <div class="row flex-v-center">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -223,89 +228,129 @@
                                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                                     <div class="annual-reports">
                                         <div class="row">
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                                <div class="annual-reports-image">
-                                                    <img src="img/maps/T10.jpg" width="100%" height="300" style="transform:rotate(270deg);">
+                                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                                <!-- <div class="annual-reports-image">
+                                                    <img src="" width="100%" height="300" style="transform:rotate(270deg);">
+                                                </div> -->
+                                                <div id="image-gallery-1" class="cf">
+                                                    <img src="img/maps/T10.jpg" id="imageT10"  data-high-res-src="img/maps/T10.jpg" alt="" class="gallery-items" style="transform:rotate(270deg);" height="30" width="550">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
                                                 <div class="annual-reports-content">
                                                     <h4>T10</h4>
-                                                    <p>Fares
-                                                        Flat fare: RM4.30
+                                                    <p>
+                                                        <strong>Flat fare: RM4.30</strong> <br><br>
 
-                                                        Frequency
-                                                        Every 1 hour
+                                                        <strong>Frequency</strong> <br>
+                                                        Every 1 hour  <br> <br>
 
-                                                        Operating Hours
-                                                        Daily: 6.45am – 7.45pm
+                                                        <strong>Operating Hours</strong> <br>
+                                                        Daily: 6.45am – 7.45pm <br><br>
 
-                                                        Timetable (Saturdays – Thursdays)
-                                                        Departure from Kangar: 0645, 0745, 0845, 0945, 1045, 1145, 1245, 1345, 1445, 1545, 1645, 1745, 1845, 1945
-                                                        Departure from Changlun: 0645, 0745, 0845, 0945, 1045, 1145, 1245, 1345, 1445, 1545, 1645, 1745, 1845, 1945
-
-                                                        Timetable (Fridays)
-                                                        Departure from Kangar: 0645, 0745, 0845, 0945, 1045, 1145, 1445, 1545, 1645, 1745, 1845, 1945
-                                                        Departure from Changlun: 0645, 0745, 0845, 0945, 1045, 1145, 1445, 1545, 1645, 1745, 1845, 1945 </p>
-                                                    <ul>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                    </ul>
+                                                        <strong>Timetable (Saturdays – Thursdays)</strong> <br>  
+                                                        <i class="fa fa-check"></i><strong>Departure from Kangar</strong>: 0645, 0745, 0845, 0945, 1045, 1145, 1245, 1345, 1445, 1545, 1645, 1745, 1845, 1945
+                                                         <br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Changlun</strong>: 0645, 0745, 0845, 0945, 1045, 1145, 1245, 1345, 1445, 1545, 1645, 1745, 1845, 1945
+                                                         <br><br>
+                                                        <strong>Timetable (Fridays)</strong><br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Kangar</strong>: 0645, 0745, 0845, 0945, 1045, 1145, 1445, 1545, 1645, 1745, 1845, 1945
+                                                         <br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Changlun</strong>: 0645, 0745, 0845, 0945, 1045, 1145, 1445, 1545, 1645, 1745, 1845, 1945 
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right">
-                                                <div class="annual-reports-image">
-                                                    <img src="img/reports/2015.jpg" alt="">
+                                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 pull-right">
+                                                <div id="image-gallery-2" class="cf">
+                                                    <img src="img/maps/T11.jpg" data-high-res-src="img/maps/T10.jpg" alt="" class="gallery-items" style="transform:rotate(270deg);" height="30" width="550">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
                                                 <div class="annual-reports-content">
-                                                    <h4>2016 logistics transportation annual reprot</h4>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                                                    <ul>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                    </ul>
+                                                    <h4>T11</h4>
+                                                    <p>
+                                                        <strong>Flat Fare: RM5.30</strong> <br><br>
+
+                                                        <strong>Frequency</strong> <br>
+                                                        Every 1 hour 30 minutes  <br> <br>
+
+                                                        <strong>Operating Hours</strong> <br>
+                                                        Daily: 6.00am – 7.30pm <br><br>
+
+                                                        <strong>Timetable (Saturdays – Thursdays)</strong> <br>  
+                                                        <i class="fa fa-check"></i><strong>Departure from Kangar</strong>: 0600, 0730, 0900, 1030, 1200, 1330, 1500, 1630, 1800, 1930
+                                                         <br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Padang Besar</strong>: 0600, 0730, 0900, 1030, 1200, 1330, 1500, 1630, 1800, 1930
+                                                         <br><br>
+                                                        <strong>Timetable (Fridays)</strong><br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Kangar</strong>: 0600, 0730, 0900, 1030, 1200, 1500, 1630, 1800, 1930
+                                                         <br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Padang Besar</strong>:  0600, 0730, 0900, 1030, 1200, 1500, 1630, 1800, 1930
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                                                <div class="annual-reports-image">
-                                                    <img src="img/reports/2016.jpg" alt="">
+                                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                                <div id="image-gallery-3" class="cf">
+                                                    <img src="img/maps/T12.jpg" data-high-res-src="img/maps/T10.jpg" alt="" class="gallery-items" style="transform:rotate(270deg);" height="30" width="550">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
                                                 <div class="annual-reports-content">
-                                                    <h4>2016 logistics transportation annual reprot</h4>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                                                    <ul>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                    </ul>
+                                                    <h4>T12</h4>
+                                                    <p>
+                                                        <strong>Flat Fare: RM2.90</strong> <br><br>
+
+                                                        <strong>Frequency</strong> <br>
+                                                        Every 1 hour 30 minutes  <br> <br>
+
+                                                        <strong>Operating Hours</strong> <br>
+                                                        Daily: 6.30am – 8.00pm <br><br>
+
+                                                        <strong>Timetable (Saturdays – Thursdays)</strong> <br>  
+                                                        <i class="fa fa-check"></i><strong>Departure from Kangar</strong>: 0630, 0800, 0930, 1100, 1230, 1400, 1530, 1700, 1830, 2000
+                                                         <br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Kampung Seberang Ramai</strong>: 0630, 0800, 0930, 1100, 1230, 1400, 1530, 1700, 1830, 2000
+                                                         <br><br>
+                                                        <strong>Timetable (Fridays)</strong><br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Kangar</strong>: 0630, 0800, 0930, 1100, 1230, 1530, 1700, 1830, 2000
+                                                         <br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Kampung Seberang Ramai</strong>:  0630, 0800, 0930, 1100, 1230, 1530, 1700, 1830, 2000
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 pull-right">
-                                                <div class="annual-reports-image">
-                                                    <img src="img/reports/2017.jpg" alt="">
+                                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 pull-right">
+                                                <div id="image-gallery-4" class="cf">
+                                                    <img src="img/maps/T13.jpg" data-high-res-src="img/maps/T10.jpg" alt="" class="gallery-items" style="transform:rotate(270deg);" height="30" width="550">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
                                                 <div class="annual-reports-content">
-                                                    <h4>2016 logistics transportation annual reprot</h4>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                                                    <ul>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                        <li><i class="fa fa-check"></i> Sed quia consequuntur magni dolores eos.</li>
-                                                    </ul>
+                                                    <h4>T13</h4>
+                                                    <p>
+                                                        <strong>Flat Fare: RM5.70</strong> <br><br>
+
+                                                        <strong>Frequency</strong> <br>
+                                                        Every 1 hour 45 minutes  <br> <br>
+
+                                                        <strong>Operating Hours</strong> <br>
+                                                        Daily: 6.15am – 8.15pm <br><br>
+
+                                                        <strong>Timetable (Saturdays – Thursdays)</strong> <br>  
+                                                        <i class="fa fa-check"></i><strong>Departure from Kangar</strong>: 0615, 0800, 0945, 1130, 1315, 1500, 1645, 1830, 2015
+                                                         <br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Alor Setar (Shahab Perdana)</strong>: 0615, 0800, 0945, 1130, 1500, 1645, 1830, 2015
+                                                         <br><br>
+                                                        <strong>Timetable (Fridays)</strong><br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Kangar</strong>: 0615, 0800, 0945, 1130, 1315, 1500, 1645, 1830, 2015
+                                                         <br>
+                                                        <i class="fa fa-check"></i><strong>Departure from Alor Setar (Shahab Perdana)</strong>:  0615, 0800, 0945, 1130, 1500, 1645, 1830, 2015
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -356,6 +401,27 @@
 
     <!--===== ACTIVE JS=====-->
     <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+
+        // var angle = 0;
+        $(function () {
+            var viewer = ImageViewer();
+            $('.gallery-items').click(function () {
+                var imgSrc = this.src,
+                    highResolutionImage = $(this).data('high-res-img');
+                    // angle += 270;
+                $("#imageT10").css({'transform': 'rotate(270deg)'});
+                viewer.show(imgSrc, highResolutionImage);
+            });
+        });
+
+    // $(document).ready(function() {
+    // $(document).on('click','#clickme',function(){
+    //     $("#image").css({'transform': 'rotate(90deg)'});
+    // });
+
+        </script>
 </body>
 
 </html>
